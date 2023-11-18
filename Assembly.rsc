@@ -5,9 +5,9 @@ data Instr
     = pushNat(int intCon)
     // Push identifier on the stack
     | pushId(str id)
-    // Get the variable at identifier top-1 and push it on the stack
+    // Get the variable at identifier top and push it on the stack
     | getVal()
-    // Assign value on top, to variable at identifier top-1
+    // Assign value on top-1, to variable at identifier top
     | setVal()
     // Associate a label with the next instruction
     | label(str label)

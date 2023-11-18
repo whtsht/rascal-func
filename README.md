@@ -6,7 +6,7 @@ A toy language compiler made with Rascal.
 
 ```
 $ rascal
-
+rascal>import Main;
 rascal>compile(|cwd:///examples/fib.func|);
 map[str, list[Instr]]: ("fib":[
     pushId("n"),
@@ -15,7 +15,7 @@ map[str, list[Instr]]: ("fib":[
     getVal(),
     pushNat(2),
     lt(),
-    goIf("L13"),
+    goIf("L1"),
     pushId("n"),
     getVal(),
     pushNat(1),
@@ -29,10 +29,10 @@ map[str, list[Instr]]: ("fib":[
     pushId("fib"),
     call(),
     add(),
-    go("L14"),
-    label("L13"),
+    go("L2"),
+    label("L1"),
     pushId("n"),
     getVal(),
-    label("L14")
+    label("L2")
   ])
 ```

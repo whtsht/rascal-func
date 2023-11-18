@@ -5,7 +5,7 @@ import Abstract;
 import IO;
 
 Instrs compileBinding(binding(str name, EXP exp))
-    = [pushId(name), *compileExp(exp), setVal()];
+    = [*compileExp(exp), pushId(name), setVal()];
 
 Instrs compileExp(natCon (int N)) = [pushNat(N)];
 
